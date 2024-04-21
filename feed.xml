@@ -1,0 +1,102 @@
+<produtos>
+<item>
+<id>989812</id>
+<title>"Blusa moletom com capuz- Black"</title>
+<price>BRL 129.00</price>
+<link>"www.loja.com.br/p/blusa-moletom-com-capuz"</link>
+<image_link>"www.loja.com.br/imagens/blusa-moletom-com-capuz.jpg"</image_link>
+<product_type>"Moda > Blusas"</product_type>
+<color>"Black"</color>
+<availability>"Em estoque"</availability>
+</item>
+<item>
+<id>261557</id>
+<title>"Calça de sarja- Azul"</title>
+<price>BRL 130.00</price>
+<link>"www.loja.com.br/p/calca-de-sarja"</link>
+<image_link>"www.loja.com.br/imagens/calca-de-sarja.jpg"</image_link>
+<product_type>"Moda > Calças"</product_type>
+<color>null</color>
+<availability>"Em estoque"</availability>
+</item>
+<item>
+<id>235840</id>
+<title>"Cardigan Helena - Rosa"</title>
+<price>BRL 55.00</price>
+<link>"www.loja.com.br/p/cardigan-helena"</link>
+<image_link>"www.loja.com.br/imagens/cardigan-helena.jpg"</image_link>
+<product_type>"Moda > Cardigans"</product_type>
+<color>null</color>
+<availability>"Em estoque"</availability>
+</item>
+<item>
+<id>246804</id>
+<title>"Bolsa lateral - Off White"</title>
+<price>BRL 250.00</price>
+<link>"www.loja.com.br/p/bolsa-lateral"</link>
+<image_link>"www.loja.com.br/imagens/bolsa-lateral.mp3"</image_link>
+<product_type>"Moda > Acessórios"</product_type>
+<color>"Off White"</color>
+<availability>"Em estoque"</availability>
+</item>
+<item>
+<id>776143</id>
+<title>"Óculos de natação - Amarelo"</title>
+<price>BRL 49.00</price>
+<link>"www.loja.com.br/p/oculos-de-natacao"</link>
+<image_link>"www.loja.com.br/imagens/oculos-de-natacao.jpg"</image_link>
+<product_type>"Moda > Acessórios"</product_type>
+<color>"Amarelo"</color>
+<availability>"Em estoque"</availability>
+</item>
+<item>
+<id>217865</id>
+<title>"Sapatilhas verniz - Branco"</title>
+<price>BRL 189.00</price>
+<link>"www.loja.com.br/p/sapatilhas-verniz"</link>
+<image_link>"www.loja.com.br/imagens/sapatilhas-verniz.mp3"</image_link>
+<product_type>"Moda > Calçados"</product_type>
+<color>Branco</color>
+<availability>"Fora de estoque"</availability>
+</item>
+<item>
+<id>441684</id>
+<title>"Tênis Running - Rosa"</title>
+<price>BRL 149.40</price>
+<link>"www.loja.com.br/p/tenis-running"</link>
+<image_link>"www.loja.com.br/imagens/tenis-running.jpg"</image_link>
+<product_type>"Moda > Calçados"</product_type>
+<color>"Rosa"</color>
+<availability>"Em estoque"</availability>
+</item>
+<item>
+<id>762398</id>
+<title>"Jaqueta Karen - Marrom"</title>
+<price>BRL 199.00</price>
+<link>"www.loja.com.br/p/jaqueta-karen"</link>
+<image_link>"www.loja.com.br/imagens/calca-legging-simples.jpg"</image_link>
+<product_type>"Moda > Jaquetas"</product_type>
+<color>Marrom</color>
+<availability>"Em estoque"</availability>
+</item>
+<item>
+<id>818492</id>
+<title>"Luva Bordada minimalista - Off White"</title>
+<price>BRL 59.90</price>
+<link>"www.loja.com.br/p/luva-bordada-minimalista"</link>
+<image_link>"www.loja.com.br/imagens/luva-bordada-minimalista.jpg"</image_link>
+<product_type>"Moda > Acessórios"</product_type>
+<color>Off White</color>
+<availability>"Em estoque"</availability>
+</item>
+<item>
+<id>595044</id>
+<title>"Óculos de sol - Unissex - Marrom"</title>
+<price>BRL 69.90</price>
+<link>"www.loja.com.br/p/oculos-sol-unissex"</link>
+<image_link>"www.loja.com.br/imagens/oculos-sol-unissex.jpg"</image_link>
+<product_type>"Moda > Acessórios"</product_type>
+<color>Marrom</color>
+<availability>"Fora de estoque"</availability>
+</item>
+</produtos>
