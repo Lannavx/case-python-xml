@@ -16,49 +16,42 @@ Solicitamos uma análise e, se possível, a correção dos seguintes IDs:
 '''
 
 import xml.etree.ElementTree as ET 
-conteudo_xml = ET.parse('feed.xml')
-produtos = conteudo_xml.getroot()
 
-def identifica_id_item(item_id):
-    for item in conteudo_xml.findall('item'):
-        if item_id == item.find('id').text:
-            return item
-        else:
-            continue
+conteudo_xml = ET.parse('feed.xml')  
+produtos = conteudo_xml.getroot()     
 
 def exclui_item_fora_estoque():
-    for item in conteudo_xml.findall('item'):
-        for disponibilidade in item.findall('availability'):
-            if disponibilidade.text == '"Fora de estoque"':
-                produtos.remove(item)
+    '''Itera sobre os itens do arquivo XML e exclui os itens "Fora de estoque"'''
+    for item in conteudo_xml.findall('item'):                 
+        for disponibilidade in item.findall('availability'):      
+            if disponibilidade.text == '"Fora de estoque"':       
+                produtos.remove(item)                             
 
-def atribui_cor(item_id):
-    item = identifica_id_item(item_id)
-    if item is not None:
-        for cor in item.findall('color'):
-            if cor.text == 'null':
-                titulo =  item.findall('title')      
-                for nome in titulo:
-                    nome_cor = nome.text.strip().split()[-1].replace('"','')
-                cor.text = nome_cor   
-    else:
-        print(f"Item com ID {item_id} não encontrado.")         
-
-def altera_extensao_link_imagem(item_id):
-    item = identifica_id_item(item_id)
-    if item is not None:  
-        for link in item.findall('image_link'):
-            if '.mp3' in link.text:
-                link_modificado = link.text.replace('.mp3', '.jpg') 
-                link.text = link_modificado
-    else:
-        print(f"Item com ID {item_id} não encontrado.")            
+def atribui_cor(conteudo_xml):                
+    '''Itera sobre os itens do arquivo XML identificando a cor nos titulos, 
+    exclui os espaços no titulo e substitui a cor identificada no lugar de null'''                         
+    for item in conteudo_xml.findall('item'):     
+        for cor in item.findall('color'):                                            
+            if cor.text == 'null':          
+                titulo =  item.findall('title')        
+                for nome in titulo:                          
+                    nome_cor = nome.text.strip().split()[-1].replace('"','') 
+                cor.text = nome_cor                     
+                                             
+def altera_extensao_link_imagem(conteudo_xml):          
+    '''Itera sobre os itens do arquivo XML identificando o texto '.mp3' e substituindo para 'jpg' '''
+    for item in conteudo_xml.findall('item'):                                       
+        for link in item.findall('image_link'):                                     
+            if '.mp3' in link.text:                                                 
+                link_modificado = link.text.replace('.mp3', '.jpg')                 
+                link.text = link_modificado                                         
 
 exclui_item_fora_estoque()
+atribui_cor(conteudo_xml)
+altera_extensao_link_imagem(conteudo_xml)
 
-atribui_cor('235840')
-atribui_cor('261557')
-altera_extensao_link_imagem('246804')
-altera_extensao_link_imagem('217865')
+# Salva as alterações no arquivo XML
+conteudo_xml.write('feed_alterado.xml', encoding='utf-8', xml_declaration=True)
 
-conteudo_xml.write('feed.xml', encoding='utf-8', xml_declaration=True)
+# encoding define o formato de codificação de caracteres
+# xml_declaration adiciona a declaração de XML no início do arquivo.
